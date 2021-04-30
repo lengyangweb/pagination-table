@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    --backgroundColor: #333;
+    --fontColor: #eee;
+    --prevBtnColor: orange;
+    --nextBtnColor: rgb(65, 65, 228);
+}
+
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: var(--backgroundColor);
+
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    position: absolute;
+    width: 80vw;
+    border: 2px solid #fff;
+    margin-top: 2rem;
+    color: var(--fontColor);
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.table thead {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.table thead th {
+    width: 100vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+    letter-spacing: 2px;
+    border: 2px solid #fff;
+}
+
+.table tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+.table tbody tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 1s ease;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.table tbody tr td {
+    width: 100vw;
+    padding: 10px;
+    border: 2px solid var(--fontColor);
+    display: flex;
+    justify-content: center;
+}
+
+.navigation {
+    color: var(--fontColor);
+    position: absolute;
+    margin-top: 43vw;
+
+    display: flex;
+}
+
+.navigation > div {
+    border: 2px solid var(--fontColor);
+    padding: 10px 20px;
+}
+
+.navigation > button {
+    padding: 5px 20px;
+    margin: 0 5px;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigation > button:focus {
+    outline: none;
+}
+
+.navigation .prevBtn {
+    background: var(--prevBtnColor);
+    color: var(--fontColor);
+}
+
+.navigation .nextBtn {
+    background: var(--nextBtnColor);
+    color: var(--fontColor);
+}
